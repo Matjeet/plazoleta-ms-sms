@@ -3,6 +3,7 @@ package com.pragma.powerup.application.handler.impl;
 import com.pragma.powerup.application.dto.request.SmsInfoRequestDto;
 import com.pragma.powerup.application.handler.ISmsNotificationHandler;
 import com.pragma.powerup.domain.api.ISecurityCodeServicePort;
+import com.pragma.powerup.domain.api.ISenderServicePort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 public class SmsNotificationHandler implements ISmsNotificationHandler {
 
     private final ISecurityCodeServicePort securityCodeServicePort;
+    private final ISenderServicePort senderServicePort;
     @Override
     public int sendSms(SmsInfoRequestDto smsInfoRequestDto) {
 
@@ -23,7 +25,9 @@ public class SmsNotificationHandler implements ISmsNotificationHandler {
                 smsInfoRequestDto.getRestaurantName(),
                 securityCode
         ));
-        
+
+        senderServicePort.send(smsInfoRequestDto.getPhoneNumber(),message.toString());
+
         return securityCode;
     }
 }
