@@ -1,9 +1,5 @@
 server:
   port: 8083
 
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
 appDescription: "Pragma Powerup"
 appVersion: "1.0.0"
