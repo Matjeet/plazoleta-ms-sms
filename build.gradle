@@ -45,6 +45,8 @@ dependencies {
 
 	implementation "org.springdoc:springdoc-openapi-ui:${openApiVersion}"
 	implementation "org.springdoc:springdoc-openapi-webflux-ui:${openApiVersion}"
+
+	implementation "com.twilio.sdk:twilio:9.X.X"
 }
 
 tasks.named('test') {
