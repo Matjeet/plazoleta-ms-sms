@@ -16,9 +16,9 @@ import org.springframework.context.annotation.Configuration;
 @RequiredArgsConstructor
 public class BeanConfiguration {
 
-    @Value("${twilio.username}")
+    @Value("${twilio.accountId}")
     private String username;
-    @Value("${twilio.password}")
+    @Value("${twilio.authToken}")
     private String password;
 
     @Bean

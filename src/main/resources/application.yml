@@ -2,9 +2,9 @@ server:
   port: 8083
 
 twilio:
-  username: "twilio_user"
-  password: "twilio_pass"
-  phoneNumber: "twilio_phone"
+  phoneNumber: "twilio_number"
+  accountId: "twilio_accountId"
+  authToken: "twilio_authToken"
 
 appDescription: "Pragma Powerup"
 appVersion: "1.0.0"
