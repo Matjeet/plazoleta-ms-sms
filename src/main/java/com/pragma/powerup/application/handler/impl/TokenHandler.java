@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 public class TokenHandler implements ITokenHandler {
 
     private static final String ACCESS_TOKEN_SECRET = "fa52f4e13bc9557eb253c02ed25d0ecaf9c37a3e";
+    private static final String ROLE = "role";
     @Override
     public UsernamePasswordAuthenticationToken getAuthenticationToken(String token) {
         Claims claims;
@@ -34,7 +35,7 @@ public class TokenHandler implements ITokenHandler {
         }
 
         String email =claims.getSubject();
-        List<String> role = claims.get(Constants.ROLE, AbstractList.class);
+        List<String> role = claims.get(ROLE, AbstractList.class);
 
         return new UsernamePasswordAuthenticationToken(
                 email,
