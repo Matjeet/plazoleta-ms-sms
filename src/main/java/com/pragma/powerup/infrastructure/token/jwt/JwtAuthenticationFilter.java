@@ -1,5 +1,6 @@
 package com.pragma.powerup.infrastructure.token.jwt;
 
+import com.pragma.powerup.application.handler.ITokenHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
