@@ -4,6 +4,7 @@ server:
 twilio:
   username: "twilio_user"
   password: "twilio_pass"
+  phoneNumber: "twilio_phone"
 
 appDescription: "Pragma Powerup"
 appVersion: "1.0.0"
