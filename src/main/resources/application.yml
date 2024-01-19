@@ -1,5 +1,9 @@
 server:
   port: 8083
 
+twilio:
+  username: "twilio_user"
+  password: "twilio_pass"
+
 appDescription: "Pragma Powerup"
 appVersion: "1.0.0"
