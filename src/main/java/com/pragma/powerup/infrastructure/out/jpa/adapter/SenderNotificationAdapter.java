@@ -14,8 +14,16 @@ public class SenderNotificationAdapter implements ISenderServicePort {
 
     @Value("${twilio.phoneNumber}")
     private String twilioPhoneNumber;
+    @Value("${twilio.accountId}")
+    private String accountId;
+    @Value("${twilio.authToken}")
+    private String authToken;
 
     private final TwilioRestClient client;
+
+    public SenderNotificationAdapter(){
+        client = new TwilioRestClient.Builder(accountId,authToken).build();
+    }
 
     @Override
     public void send(String to, String message) {
