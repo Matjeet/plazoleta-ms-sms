@@ -6,5 +6,9 @@ twilio:
   accountId: "twilio_accountId"
   authToken: "twilio_authToken"
 
+spring:
+  application:
+    name: "microservice-sms"
+
 appDescription: "Pragma Powerup"
 appVersion: "1.0.0"
